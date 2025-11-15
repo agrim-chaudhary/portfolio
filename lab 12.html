@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey and Feedback Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: magenta;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    form {
+      background-color: white;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border: 2px solid #dee2e6;
+    }
+
+    h2 {
+      text-align: center;
+      color: #343a40;
+    }
+
+    label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+      
+    }
+    input:hover{
+      color: red;
+      font-size: 100px;
+
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: space-between;
+      width: 60%;
+      margin: 10px 0 20px;
+    }
+    h2:hover{
+      transform: scale(1.2);
+      transform: ;
+      transition: 2s;
+    }
+
+    .rating label {
+      font-weight: normal;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #343a40;
+      color: white;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Survey & Feedback Form
+  </header>
+
+  <form>
+    <h2>We value your feedback!</h2>
+
+    <!-- User Information -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="10" max="100" placeholder="Enter your age">
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender">
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+
+    <!-- Rating Section -->
+    <label>Rate Your Experience:</label>
+    <div class="rating">
+      <label><input type="radio" name="rating" value="1"> 1</label>
+      <label><input type="radio" name="rating" value="2"> 2</label>
+      <label><input type="radio" name="rating" value="3"> 3</label>
+      <label><input type="radio" name="rating" value="4"> 4</label>
+      <label><input type="radio" name="rating" value="5"> 5</label>
+    </div>
+
+    <!-- Experience Questions -->
+    <label for="service">How satisfied are you with our service?</label>
+    <select id="service" name="service">
+      <option>Very Satisfied</option>
+      <option>Satisfied</option>
+      <option>Neutral</option>
+      <option>Unsatisfied</option>
+      <option>Very Unsatisfied</option>
+    </select>
+
+
+    <label for="comments">Share your feedback or suggestions:</label>
+    <textarea id="comments" name="comments" placeholder="Write your feedback here..." rows="10" cols="20"></textarea>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+  <footer>
+    © 2025 Survey Form | Designed by You
+  </footer>
+
+</body>
+</html>
